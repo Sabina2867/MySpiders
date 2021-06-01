@@ -1,0 +1,50 @@
+﻿@model MySpiders.Kolekcja
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Szczegóły</h2>
+
+<div>
+    <h4>Kolekcja</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Gatunek)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gatunek)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ilosc_posiadanych_sztuk)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ilosc_posiadanych_sztuk)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stadium_pajaka_w_cm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stadium_pajaka_w_cm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cena_za_jedna_sztuke)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cena_za_jedna_sztuke)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edytuj", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Powrót", "Index")
+</p>

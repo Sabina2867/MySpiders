@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SpidersModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Kolekcja">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Gatunek" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ilosc_posiadanych_sztuk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Stadium_pajaka_w_cm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Cena_za_jedna_sztuke" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="SpidersEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Kolekcja" EntityType="Self.Kolekcja" />
+  </EntityContainer>
+</Schema>

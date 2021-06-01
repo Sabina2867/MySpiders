@@ -1,0 +1,56 @@
+﻿@model MySpiders.Kolekcja
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Usuń</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Kolekcja</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Gatunek)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gatunek)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ilosc_posiadanych_sztuk)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ilosc_posiadanych_sztuk)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stadium_pajaka_w_cm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stadium_pajaka_w_cm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cena_za_jedna_sztuke)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cena_za_jedna_sztuke)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Usuń" class="btn btn-default" /> |
+            @Html.ActionLink("Powrót", "Index")
+        </div>
+    }
+</div>

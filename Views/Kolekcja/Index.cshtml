@@ -1,0 +1,51 @@
+﻿@model IEnumerable<MySpiders.Kolekcja>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Twoja kolekcja</h2>
+
+<p>
+    @Html.ActionLink("Dodaj", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Gatunek)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ilosc_posiadanych_sztuk)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Stadium_pajaka_w_cm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cena_za_jedna_sztuke)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gatunek)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ilosc_posiadanych_sztuk)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stadium_pajaka_w_cm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cena_za_jedna_sztuke)
+        </td>
+        <td>
+            @Html.ActionLink("Edytuj", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Szczegóły", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Usuń", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

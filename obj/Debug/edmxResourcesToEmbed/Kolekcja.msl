@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SpidersModelStoreContainer" CdmEntityContainer="SpidersEntities">
+    <EntitySetMapping Name="Kolekcja">
+      <EntityTypeMapping TypeName="SpidersModel.Kolekcja">
+        <MappingFragment StoreEntitySet="Kolekcja">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Gatunek" ColumnName="Gatunek" />
+          <ScalarProperty Name="Ilosc_posiadanych_sztuk" ColumnName="Ilosc_posiadanych_sztuk" />
+          <ScalarProperty Name="Stadium_pajaka_w_cm" ColumnName="Stadium_pajaka_w_cm" />
+          <ScalarProperty Name="Cena_za_jedna_sztuke" ColumnName="Cena_za_jedna_sztuke" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
